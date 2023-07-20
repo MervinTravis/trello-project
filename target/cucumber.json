@@ -1,0 +1,426 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2023-07-20T14:02:04.776Z",
+        "before": [
+          {
+            "result": {
+              "duration": 2957528900,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.setUp()"
+            }
+          },
+          {
+            "result": {
+              "duration": 605354100,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.setUpApi()"
+            }
+          }
+        ],
+        "line": 7,
+        "name": "Create a Card through Trello API and Verify in Trello UI",
+        "description": "",
+        "id": "creating-cards-in-trello-api-and-verifying-in-trello-ui;create-a-card-through-trello-api-and-verify-in-trello-ui",
+        "after": [
+          {
+            "result": {
+              "duration": 281800,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.destroy()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 35816800,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "user has  a valid Trello API key and token",
+            "match": {
+              "location": "CreateBoardStepDefs.user_has_a_valid_Trello_API_key_and_token()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2800112600,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "the user has a Trello board with the name \"NEW BOARD\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"NEW BOARD\"",
+                  "offset": 42
+                }
+              ],
+              "location": "CreateListsStepDefs.the_user_has_a_Trello_board_with_the_name(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3110000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "user has the board id from the response body",
+            "match": {
+              "location": "CreateCardsStepDefs.user_has_the_board_id_from_the_response_body()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 349088400,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "the user send a POST request with the list name \"NEW LIST\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"NEW LIST\"",
+                  "offset": 48
+                }
+              ],
+              "location": "CreateListsStepDefs.the_user_send_a_POST_request_with_the_list_name(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1329400,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "user has the list id from the response body",
+            "match": {
+              "location": "CreateCardsStepDefs.user_has_the_list_id_from_the_response_body()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2084358900,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "user send a POST request to create cards with following names:",
+            "match": {
+              "location": "CreateCardsStepDefs.user_send_a_POST_request_to_create_cards_with_following_names(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "NEW CARD",
+                  "OLD CARD",
+                  "ANCIENT CARD",
+                  "A",
+                  "B"
+                ]
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 3218700,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "the response body should contain the created cards with following names:",
+            "match": {
+              "location": "CreateCardsStepDefs.the_response_body_should_contain_the_created_cards_with_following_names(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "NEW CARD",
+                  "OLD CARD",
+                  "ANCIENT CARD",
+                  "A",
+                  "B"
+                ]
+              }
+            ],
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@wip"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-07-20T14:02:13.673Z",
+        "before": [
+          {
+            "result": {
+              "duration": 19730800,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.setUp()"
+            }
+          },
+          {
+            "result": {
+              "duration": 28000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.setUpApi()"
+            }
+          }
+        ],
+        "line": 20,
+        "name": "Verifying Card Creation in Trello UI",
+        "description": "",
+        "id": "creating-cards-in-trello-api-and-verifying-in-trello-ui;verifying-card-creation-in-trello-ui",
+        "after": [
+          {
+            "result": {
+              "duration": 339700,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.destroy()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 23290270600,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "user is logged into Trello.com with valid credentials",
+            "match": {
+              "location": "CreateBoardStepDefs.user_is_logged_into_Trello_com_with_valid_credentials()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 729522300,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "user clicks the board \"NEW BOARD\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"NEW BOARD\"",
+                  "offset": 22
+                }
+              ],
+              "location": "CreateBoardStepDefs.user_clicks_the_board(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1319124400,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "user should see the newly created lists in Trello board page with name \"NEW LIST\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"NEW LIST\"",
+                  "offset": 71
+                }
+              ],
+              "location": "CreateListsStepDefs.user_should_see_the_newly_created_lists_in_Trello_board_page_with_name(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1895293700,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "user opens the card with the name \"NEW CARD\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"NEW CARD\"",
+                  "offset": 34
+                }
+              ],
+              "location": "CreateCardsStepDefs.user_opens_the_card_with_the_name(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 868271400,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "user clicks on the add member button",
+            "match": {
+              "location": "CreateCardsStepDefs.user_clicks_on_the_add_member_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 348248700,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "user searches the text \"unzertrellotask\" in the search input field",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"unzertrellotask\"",
+                  "offset": 23
+                }
+              ],
+              "location": "CreateCardsStepDefs.user_searches_the_text_in_the_search_input_field(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 288237300,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "user adds new member with the name \"unzertrellotask\" to the card",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"unzertrellotask\"",
+                  "offset": 35
+                }
+              ],
+              "location": "CreateCardsStepDefs.user_adds_new_member_with_the_name_to_the_card(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 133659100,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "user closes the member dialog",
+            "match": {
+              "location": "CreateCardsStepDefs.user_closes_the_member_dialog()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 220771300,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "user verifies the newly added member \"unzertrellotask\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"unzertrellotask\"",
+                  "offset": 37
+                }
+              ],
+              "location": "CreateCardsStepDefs.user_verifies_the_newly_added_member(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 108806300,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "user deletes the newly added member from the card",
+            "match": {
+              "location": "CreateCardsStepDefs.user_deletes_the_newly_added_member_from_the_card()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 775026200,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "user moves the card on the position 5",
+            "match": {
+              "arguments": [
+                {
+                  "val": "5",
+                  "offset": 36
+                }
+              ],
+              "location": "CreateCardsStepDefs.user_moves_the_card_on_the_position(Integer)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1083056300,
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "user verifies the new position of the card \"5\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"5\"",
+                  "offset": 43
+                }
+              ],
+              "location": "CreateCardsStepDefs.user_verifies_the_new_position_of_the_card(String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@wip"
+          }
+        ]
+      }
+    ],
+    "name": "Creating Cards in Trello API and Verifying in Trello UI",
+    "description": "  As a user of the Trello API and Trello UI\n  I want to be able to create cards through the API and verify their presence in the Trello UI\n  So that I can manage my tasks seamlessly",
+    "id": "creating-cards-in-trello-api-and-verifying-in-trello-ui",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/03-CreateCardsThroughApiAndVerifyInUi.feature",
+    "tags": [
+      {
+        "name": "@wip",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]
