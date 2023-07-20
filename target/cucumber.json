@@ -3,35 +3,35 @@
     "line": 2,
     "elements": [
       {
-        "start_timestamp": "2023-07-20T14:02:04.776Z",
+        "start_timestamp": "2023-07-20T16:18:22.639Z",
         "before": [
           {
             "result": {
-              "duration": 2957528900,
-              "status": "passed"
-            },
-            "match": {
-              "location": "Hooks.setUp()"
-            }
-          },
-          {
-            "result": {
-              "duration": 605354100,
+              "duration": 438654700,
               "status": "passed"
             },
             "match": {
               "location": "Hooks.setUpApi()"
             }
+          },
+          {
+            "result": {
+              "duration": 1961070600,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.setUp()"
+            }
           }
         ],
-        "line": 7,
-        "name": "Create a Card through Trello API and Verify in Trello UI",
+        "line": 8,
+        "name": "Create a Board/List/Card through Trello API",
         "description": "",
-        "id": "creating-cards-in-trello-api-and-verifying-in-trello-ui;create-a-card-through-trello-api-and-verify-in-trello-ui",
+        "id": "create-a-board/list/card-through-trello-api-and-perform-some-actions-with-created-cards-through-ui;create-a-board/list/card-through-trello-api",
         "after": [
           {
             "result": {
-              "duration": 281800,
+              "duration": 244400,
               "status": "passed"
             },
             "match": {
@@ -44,40 +44,76 @@
         "steps": [
           {
             "result": {
-              "duration": 35816800,
+              "duration": 96986000,
               "status": "passed"
             },
-            "line": 8,
+            "line": 9,
             "name": "user has  a valid Trello API key and token",
             "match": {
-              "location": "CreateBoardStepDefs.user_has_a_valid_Trello_API_key_and_token()"
+              "location": "CreateCardsStepDefs.user_has_a_valid_Trello_API_key_and_token()"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 2800112600,
+              "duration": 2407342000,
               "status": "passed"
             },
-            "line": 9,
-            "name": "the user has a Trello board with the name \"NEW BOARD\"",
+            "line": 10,
+            "name": "user creates a new Trello board with the name \"IT Project Management\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"NEW BOARD\"",
-                  "offset": 42
+                  "val": "\"IT Project Management\"",
+                  "offset": 46
                 }
               ],
-              "location": "CreateListsStepDefs.the_user_has_a_Trello_board_with_the_name(String)"
+              "location": "CreateCardsStepDefs.user_creates_a_new_Trello_board_with_the_name(String)"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 3110000,
+              "duration": 1613400,
               "status": "passed"
             },
-            "line": 10,
+            "line": 11,
+            "name": "the board should be created successfully with name \"IT Project Management\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"IT Project Management\"",
+                  "offset": 51
+                }
+              ],
+              "location": "CreateCardsStepDefs.the_board_should_be_created_successfully_with_name(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 475400,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "response status code should be 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 31
+                }
+              ],
+              "location": "CreateCardsStepDefs.response_status_code_should_be(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 256200,
+              "status": "passed"
+            },
+            "line": 13,
             "name": "user has the board id from the response body",
             "match": {
               "location": "CreateCardsStepDefs.user_has_the_board_id_from_the_response_body()"
@@ -86,28 +122,64 @@
           },
           {
             "result": {
-              "duration": 349088400,
+              "duration": 315190600,
               "status": "passed"
             },
-            "line": 11,
-            "name": "the user send a POST request with the list name \"NEW LIST\"",
+            "line": 14,
+            "name": "user creates a new list with name \"Unassigned\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"NEW LIST\"",
-                  "offset": 48
+                  "val": "\"Unassigned\"",
+                  "offset": 34
                 }
               ],
-              "location": "CreateListsStepDefs.the_user_send_a_POST_request_with_the_list_name(String)"
+              "location": "CreateCardsStepDefs.user_creates_a_new_list_with_name(String)"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 1329400,
+              "duration": 9703600,
               "status": "passed"
             },
-            "line": 12,
+            "line": 15,
+            "name": "the list should be created successfully with name \"Unassigned\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Unassigned\"",
+                  "offset": 50
+                }
+              ],
+              "location": "CreateCardsStepDefs.the_list_should_be_created_successfully_with_name(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 706800,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "response status code should be 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 31
+                }
+              ],
+              "location": "CreateCardsStepDefs.response_status_code_should_be(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 679900,
+              "status": "passed"
+            },
+            "line": 17,
             "name": "user has the list id from the response body",
             "match": {
               "location": "CreateCardsStepDefs.user_has_the_list_id_from_the_response_body()"
@@ -116,10 +188,10 @@
           },
           {
             "result": {
-              "duration": 2084358900,
+              "duration": 1865378200,
               "status": "passed"
             },
-            "line": 13,
+            "line": 18,
             "name": "user send a POST request to create cards with following names:",
             "match": {
               "location": "CreateCardsStepDefs.user_send_a_POST_request_to_create_cards_with_following_names(DataTable)"
@@ -127,11 +199,10 @@
             "rows": [
               {
                 "cells": [
-                  "NEW CARD",
-                  "OLD CARD",
-                  "ANCIENT CARD",
-                  "A",
-                  "B"
+                  "Define Project Scope and Objectives",
+                  "Conduct Meetings with Stakeholders",
+                  "Obtain Approval from Key Stakeholders",
+                  "Monitor System Rollout Progress"
                 ]
               }
             ],
@@ -139,10 +210,28 @@
           },
           {
             "result": {
-              "duration": 3218700,
+              "duration": 459700,
               "status": "passed"
             },
-            "line": 16,
+            "line": 20,
+            "name": "response status code should be 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 31
+                }
+              ],
+              "location": "CreateCardsStepDefs.response_status_code_should_be(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1195000,
+              "status": "passed"
+            },
+            "line": 21,
             "name": "the response body should contain the created cards with following names:",
             "match": {
               "location": "CreateCardsStepDefs.the_response_body_should_contain_the_created_cards_with_following_names(DataTable)"
@@ -150,11 +239,10 @@
             "rows": [
               {
                 "cells": [
-                  "NEW CARD",
-                  "OLD CARD",
-                  "ANCIENT CARD",
-                  "A",
-                  "B"
+                  "Define Project Scope and Objectives",
+                  "Conduct Meetings with Stakeholders",
+                  "Obtain Approval from Key Stakeholders",
+                  "Monitor System Rollout Progress"
                 ]
               }
             ],
@@ -168,35 +256,35 @@
         ]
       },
       {
-        "start_timestamp": "2023-07-20T14:02:13.673Z",
+        "start_timestamp": "2023-07-20T16:18:29.808Z",
         "before": [
           {
             "result": {
-              "duration": 19730800,
-              "status": "passed"
-            },
-            "match": {
-              "location": "Hooks.setUp()"
-            }
-          },
-          {
-            "result": {
-              "duration": 28000,
+              "duration": 147000,
               "status": "passed"
             },
             "match": {
               "location": "Hooks.setUpApi()"
             }
+          },
+          {
+            "result": {
+              "duration": 20373200,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.setUp()"
+            }
           }
         ],
-        "line": 20,
-        "name": "Verifying Card Creation in Trello UI",
+        "line": 25,
+        "name": "Performing some actions with created cards through Trello UI",
         "description": "",
-        "id": "creating-cards-in-trello-api-and-verifying-in-trello-ui;verifying-card-creation-in-trello-ui",
+        "id": "create-a-board/list/card-through-trello-api-and-perform-some-actions-with-created-cards-through-ui;performing-some-actions-with-created-cards-through-trello-ui",
         "after": [
           {
             "result": {
-              "duration": 339700,
+              "duration": 379600,
               "status": "passed"
             },
             "match": {
@@ -209,63 +297,63 @@
         "steps": [
           {
             "result": {
-              "duration": 23290270600,
+              "duration": 21342288900,
               "status": "passed"
             },
-            "line": 21,
+            "line": 26,
             "name": "user is logged into Trello.com with valid credentials",
             "match": {
-              "location": "CreateBoardStepDefs.user_is_logged_into_Trello_com_with_valid_credentials()"
+              "location": "CreateCardsStepDefs.user_is_logged_into_Trello_com_with_valid_credentials()"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 729522300,
+              "duration": 234111300,
               "status": "passed"
             },
-            "line": 22,
-            "name": "user clicks the board \"NEW BOARD\"",
+            "line": 27,
+            "name": "user clicks the board \"IT Project Management\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"NEW BOARD\"",
+                  "val": "\"IT Project Management\"",
                   "offset": 22
                 }
               ],
-              "location": "CreateBoardStepDefs.user_clicks_the_board(String)"
+              "location": "CreateCardsStepDefs.user_clicks_the_board(String)"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 1319124400,
+              "duration": 905348000,
               "status": "passed"
             },
-            "line": 23,
-            "name": "user should see the newly created lists in Trello board page with name \"NEW LIST\"",
+            "line": 28,
+            "name": "user should see the newly created list in Trello board page with name \"Unassigned\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"NEW LIST\"",
-                  "offset": 71
+                  "val": "\"Unassigned\"",
+                  "offset": 70
                 }
               ],
-              "location": "CreateListsStepDefs.user_should_see_the_newly_created_lists_in_Trello_board_page_with_name(String)"
+              "location": "CreateCardsStepDefs.user_should_see_the_newly_created_list_in_Trello_board_page_with_name(String)"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 1895293700,
+              "duration": 285050700,
               "status": "passed"
             },
-            "line": 24,
-            "name": "user opens the card with the name \"NEW CARD\"",
+            "line": 29,
+            "name": "user opens the card with the name \"Obtain Approval from Key Stakeholders\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"NEW CARD\"",
+                  "val": "\"Obtain Approval from Key Stakeholders\"",
                   "offset": 34
                 }
               ],
@@ -275,10 +363,10 @@
           },
           {
             "result": {
-              "duration": 868271400,
+              "duration": 689306500,
               "status": "passed"
             },
-            "line": 25,
+            "line": 30,
             "name": "user clicks on the add member button",
             "match": {
               "location": "CreateCardsStepDefs.user_clicks_on_the_add_member_button()"
@@ -287,10 +375,10 @@
           },
           {
             "result": {
-              "duration": 348248700,
+              "duration": 134623300,
               "status": "passed"
             },
-            "line": 26,
+            "line": 31,
             "name": "user searches the text \"unzertrellotask\" in the search input field",
             "match": {
               "arguments": [
@@ -305,10 +393,10 @@
           },
           {
             "result": {
-              "duration": 288237300,
+              "duration": 497169200,
               "status": "passed"
             },
-            "line": 27,
+            "line": 32,
             "name": "user adds new member with the name \"unzertrellotask\" to the card",
             "match": {
               "arguments": [
@@ -323,10 +411,10 @@
           },
           {
             "result": {
-              "duration": 133659100,
+              "duration": 49703500,
               "status": "passed"
             },
-            "line": 28,
+            "line": 33,
             "name": "user closes the member dialog",
             "match": {
               "location": "CreateCardsStepDefs.user_closes_the_member_dialog()"
@@ -335,10 +423,10 @@
           },
           {
             "result": {
-              "duration": 220771300,
+              "duration": 145909600,
               "status": "passed"
             },
-            "line": 29,
+            "line": 34,
             "name": "user verifies the newly added member \"unzertrellotask\"",
             "match": {
               "arguments": [
@@ -353,10 +441,10 @@
           },
           {
             "result": {
-              "duration": 108806300,
+              "duration": 75032000,
               "status": "passed"
             },
-            "line": 30,
+            "line": 35,
             "name": "user deletes the newly added member from the card",
             "match": {
               "location": "CreateCardsStepDefs.user_deletes_the_newly_added_member_from_the_card()"
@@ -365,15 +453,15 @@
           },
           {
             "result": {
-              "duration": 775026200,
+              "duration": 524298500,
               "status": "passed"
             },
-            "line": 31,
-            "name": "user moves the card on the position 5",
+            "line": 36,
+            "name": "user moves the card on the position 3",
             "match": {
               "arguments": [
                 {
-                  "val": "5",
+                  "val": "3",
                   "offset": 36
                 }
               ],
@@ -383,19 +471,23 @@
           },
           {
             "result": {
-              "duration": 1083056300,
+              "duration": 742726000,
               "status": "passed"
             },
-            "line": 32,
-            "name": "user verifies the new position of the card \"5\"",
+            "line": 37,
+            "name": "user verifies the new position \"3\" of the card \"Obtain Approval from Key Stakeholders\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"5\"",
-                  "offset": 43
+                  "val": "\"3\"",
+                  "offset": 31
+                },
+                {
+                  "val": "\"Obtain Approval from Key Stakeholders\"",
+                  "offset": 47
                 }
               ],
-              "location": "CreateCardsStepDefs.user_verifies_the_new_position_of_the_card(String)"
+              "location": "CreateCardsStepDefs.user_verifies_the_new_position_of_the_card(String,String)"
             },
             "keyword": "Then "
           }
@@ -407,9 +499,9 @@
         ]
       }
     ],
-    "name": "Creating Cards in Trello API and Verifying in Trello UI",
-    "description": "  As a user of the Trello API and Trello UI\n  I want to be able to create cards through the API and verify their presence in the Trello UI\n  So that I can manage my tasks seamlessly",
-    "id": "creating-cards-in-trello-api-and-verifying-in-trello-ui",
+    "name": "Create a Board/List/Card through Trello API and perform some actions with created cards through UI",
+    "description": "  As a user of the Trello API and Trello UI\n  I want to be able to create cards through the API and perform some actions with created cards through UI\n  So that I can manage my tasks seamlessly",
+    "id": "create-a-board/list/card-through-trello-api-and-perform-some-actions-with-created-cards-through-ui",
     "keyword": "Feature",
     "uri": "file:src/test/resources/features/03-CreateCardsThroughApiAndVerifyInUi.feature",
     "tags": [

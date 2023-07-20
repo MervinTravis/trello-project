@@ -1,7 +1,7 @@
 $(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/03-CreateCardsThroughApiAndVerifyInUi.feature");
 formatter.feature({
-  "name": "Creating Cards in Trello API and Verifying in Trello UI",
-  "description": "  As a user of the Trello API and Trello UI\n  I want to be able to create cards through the API and verify their presence in the Trello UI\n  So that I can manage my tasks seamlessly",
+  "name": "Create a Board/List/Card through Trello API and perform some actions with created cards through UI",
+  "description": "  As a user of the Trello API and Trello UI\n  I want to be able to create cards through the API and perform some actions with created cards through UI\n  So that I can manage my tasks seamlessly",
   "keyword": "Feature",
   "tags": [
     {
@@ -10,7 +10,7 @@ formatter.feature({
   ]
 });
 formatter.scenario({
-  "name": "Create a Card through Trello API and Verify in Trello UI",
+  "name": "Create a Board/List/Card through Trello API",
   "description": "",
   "keyword": "Scenario",
   "tags": [
@@ -30,17 +30,37 @@ formatter.step({
   "keyword": "Given "
 });
 formatter.match({
-  "location": "CreateBoardStepDefs.user_has_a_valid_Trello_API_key_and_token()"
+  "location": "CreateCardsStepDefs.user_has_a_valid_Trello_API_key_and_token()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "the user has a Trello board with the name \"NEW BOARD\"",
+  "name": "user creates a new Trello board with the name \"IT Project Management\"",
   "keyword": "And "
 });
 formatter.match({
-  "location": "CreateListsStepDefs.the_user_has_a_Trello_board_with_the_name(String)"
+  "location": "CreateCardsStepDefs.user_creates_a_new_Trello_board_with_the_name(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "the board should be created successfully with name \"IT Project Management\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "CreateCardsStepDefs.the_board_should_be_created_successfully_with_name(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "response status code should be 200",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "CreateCardsStepDefs.response_status_code_should_be(int)"
 });
 formatter.result({
   "status": "passed"
@@ -56,11 +76,31 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "the user send a POST request with the list name \"NEW LIST\"",
+  "name": "user creates a new list with name \"Unassigned\"",
   "keyword": "And "
 });
 formatter.match({
-  "location": "CreateListsStepDefs.the_user_send_a_POST_request_with_the_list_name(String)"
+  "location": "CreateCardsStepDefs.user_creates_a_new_list_with_name(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "the list should be created successfully with name \"Unassigned\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "CreateCardsStepDefs.the_list_should_be_created_successfully_with_name(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "response status code should be 200",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "CreateCardsStepDefs.response_status_code_should_be(int)"
 });
 formatter.result({
   "status": "passed"
@@ -80,11 +120,10 @@ formatter.step({
   "rows": [
     {
       "cells": [
-        "NEW CARD",
-        "OLD CARD",
-        "ANCIENT CARD",
-        "A",
-        "B"
+        "Define Project Scope and Objectives",
+        "Conduct Meetings with Stakeholders",
+        "Obtain Approval from Key Stakeholders",
+        "Monitor System Rollout Progress"
       ]
     }
   ],
@@ -97,15 +136,24 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
+  "name": "response status code should be 200",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "CreateCardsStepDefs.response_status_code_should_be(int)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
   "name": "the response body should contain the created cards with following names:",
   "rows": [
     {
       "cells": [
-        "NEW CARD",
-        "OLD CARD",
-        "ANCIENT CARD",
-        "A",
-        "B"
+        "Define Project Scope and Objectives",
+        "Conduct Meetings with Stakeholders",
+        "Obtain Approval from Key Stakeholders",
+        "Monitor System Rollout Progress"
       ]
     }
   ],
@@ -121,7 +169,7 @@ formatter.after({
   "status": "passed"
 });
 formatter.scenario({
-  "name": "Verifying Card Creation in Trello UI",
+  "name": "Performing some actions with created cards through Trello UI",
   "description": "",
   "keyword": "Scenario",
   "tags": [
@@ -141,33 +189,33 @@ formatter.step({
   "keyword": "Given "
 });
 formatter.match({
-  "location": "CreateBoardStepDefs.user_is_logged_into_Trello_com_with_valid_credentials()"
+  "location": "CreateCardsStepDefs.user_is_logged_into_Trello_com_with_valid_credentials()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user clicks the board \"NEW BOARD\"",
+  "name": "user clicks the board \"IT Project Management\"",
   "keyword": "When "
 });
 formatter.match({
-  "location": "CreateBoardStepDefs.user_clicks_the_board(String)"
+  "location": "CreateCardsStepDefs.user_clicks_the_board(String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user should see the newly created lists in Trello board page with name \"NEW LIST\"",
+  "name": "user should see the newly created list in Trello board page with name \"Unassigned\"",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "CreateListsStepDefs.user_should_see_the_newly_created_lists_in_Trello_board_page_with_name(String)"
+  "location": "CreateCardsStepDefs.user_should_see_the_newly_created_list_in_Trello_board_page_with_name(String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user opens the card with the name \"NEW CARD\"",
+  "name": "user opens the card with the name \"Obtain Approval from Key Stakeholders\"",
   "keyword": "And "
 });
 formatter.match({
@@ -237,7 +285,7 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user moves the card on the position 5",
+  "name": "user moves the card on the position 3",
   "keyword": "And "
 });
 formatter.match({
@@ -247,11 +295,11 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user verifies the new position of the card \"5\"",
+  "name": "user verifies the new position \"3\" of the card \"Obtain Approval from Key Stakeholders\"",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "CreateCardsStepDefs.user_verifies_the_new_position_of_the_card(String)"
+  "location": "CreateCardsStepDefs.user_verifies_the_new_position_of_the_card(String,String)"
 });
 formatter.result({
   "status": "passed"
