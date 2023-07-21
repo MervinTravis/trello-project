@@ -3,24 +3,15 @@
     "line": 2,
     "elements": [
       {
-        "start_timestamp": "2023-07-20T16:18:22.639Z",
+        "start_timestamp": "2023-07-21T14:47:40.630Z",
         "before": [
           {
             "result": {
-              "duration": 438654700,
+              "duration": 397414600,
               "status": "passed"
             },
             "match": {
               "location": "Hooks.setUpApi()"
-            }
-          },
-          {
-            "result": {
-              "duration": 1961070600,
-              "status": "passed"
-            },
-            "match": {
-              "location": "Hooks.setUp()"
             }
           }
         ],
@@ -31,7 +22,7 @@
         "after": [
           {
             "result": {
-              "duration": 244400,
+              "duration": 233700,
               "status": "passed"
             },
             "match": {
@@ -44,7 +35,7 @@
         "steps": [
           {
             "result": {
-              "duration": 96986000,
+              "duration": 1917953600,
               "status": "passed"
             },
             "line": 9,
@@ -56,7 +47,7 @@
           },
           {
             "result": {
-              "duration": 2407342000,
+              "duration": 2104036700,
               "status": "passed"
             },
             "line": 10,
@@ -74,7 +65,7 @@
           },
           {
             "result": {
-              "duration": 1613400,
+              "duration": 2169800,
               "status": "passed"
             },
             "line": 11,
@@ -92,7 +83,7 @@
           },
           {
             "result": {
-              "duration": 475400,
+              "duration": 565500,
               "status": "passed"
             },
             "line": 12,
@@ -110,7 +101,7 @@
           },
           {
             "result": {
-              "duration": 256200,
+              "duration": 451000,
               "status": "passed"
             },
             "line": 13,
@@ -122,7 +113,7 @@
           },
           {
             "result": {
-              "duration": 315190600,
+              "duration": 332027100,
               "status": "passed"
             },
             "line": 14,
@@ -140,7 +131,7 @@
           },
           {
             "result": {
-              "duration": 9703600,
+              "duration": 13515300,
               "status": "passed"
             },
             "line": 15,
@@ -158,7 +149,7 @@
           },
           {
             "result": {
-              "duration": 706800,
+              "duration": 253100,
               "status": "passed"
             },
             "line": 16,
@@ -176,7 +167,7 @@
           },
           {
             "result": {
-              "duration": 679900,
+              "duration": 328900,
               "status": "passed"
             },
             "line": 17,
@@ -188,7 +179,7 @@
           },
           {
             "result": {
-              "duration": 1865378200,
+              "duration": 1481196600,
               "status": "passed"
             },
             "line": 18,
@@ -210,7 +201,7 @@
           },
           {
             "result": {
-              "duration": 459700,
+              "duration": 348400,
               "status": "passed"
             },
             "line": 20,
@@ -228,7 +219,7 @@
           },
           {
             "result": {
-              "duration": 1195000,
+              "duration": 840200,
               "status": "passed"
             },
             "line": 21,
@@ -251,25 +242,25 @@
         ],
         "tags": [
           {
+            "name": "@smoke"
+          },
+          {
             "name": "@wip"
+          },
+          {
+            "name": "@api"
+          },
+          {
+            "name": "@ignore"
           }
         ]
       },
       {
-        "start_timestamp": "2023-07-20T16:18:29.808Z",
+        "start_timestamp": "2023-07-21T14:47:46.937Z",
         "before": [
           {
             "result": {
-              "duration": 147000,
-              "status": "passed"
-            },
-            "match": {
-              "location": "Hooks.setUpApi()"
-            }
-          },
-          {
-            "result": {
-              "duration": 20373200,
+              "duration": 134657500,
               "status": "passed"
             },
             "match": {
@@ -284,11 +275,11 @@
         "after": [
           {
             "result": {
-              "duration": 379600,
+              "duration": 758915200,
               "status": "passed"
             },
             "match": {
-              "location": "Hooks.destroy()"
+              "location": "Hooks.tearDown()"
             }
           }
         ],
@@ -297,7 +288,7 @@
         "steps": [
           {
             "result": {
-              "duration": 21342288900,
+              "duration": 19395843800,
               "status": "passed"
             },
             "line": 26,
@@ -309,7 +300,7 @@
           },
           {
             "result": {
-              "duration": 234111300,
+              "duration": 216129500,
               "status": "passed"
             },
             "line": 27,
@@ -327,7 +318,7 @@
           },
           {
             "result": {
-              "duration": 905348000,
+              "duration": 860087400,
               "status": "passed"
             },
             "line": 28,
@@ -345,7 +336,7 @@
           },
           {
             "result": {
-              "duration": 285050700,
+              "duration": 229590100,
               "status": "passed"
             },
             "line": 29,
@@ -363,7 +354,7 @@
           },
           {
             "result": {
-              "duration": 689306500,
+              "duration": 1139048300,
               "status": "passed"
             },
             "line": 30,
@@ -375,7 +366,7 @@
           },
           {
             "result": {
-              "duration": 134623300,
+              "duration": 134811900,
               "status": "passed"
             },
             "line": 31,
@@ -393,7 +384,7 @@
           },
           {
             "result": {
-              "duration": 497169200,
+              "duration": 116222000,
               "status": "passed"
             },
             "line": 32,
@@ -411,7 +402,7 @@
           },
           {
             "result": {
-              "duration": 49703500,
+              "duration": 48208100,
               "status": "passed"
             },
             "line": 33,
@@ -423,7 +414,7 @@
           },
           {
             "result": {
-              "duration": 145909600,
+              "duration": 138624800,
               "status": "passed"
             },
             "line": 34,
@@ -441,7 +432,7 @@
           },
           {
             "result": {
-              "duration": 75032000,
+              "duration": 62498900,
               "status": "passed"
             },
             "line": 35,
@@ -453,15 +444,15 @@
           },
           {
             "result": {
-              "duration": 524298500,
+              "duration": 491835200,
               "status": "passed"
             },
             "line": 36,
-            "name": "user moves the card on the position 3",
+            "name": "user moves the card on the position 1",
             "match": {
               "arguments": [
                 {
-                  "val": "3",
+                  "val": "1",
                   "offset": 36
                 }
               ],
@@ -471,30 +462,36 @@
           },
           {
             "result": {
-              "duration": 742726000,
+              "duration": 796733100,
               "status": "passed"
             },
             "line": 37,
-            "name": "user verifies the new position \"3\" of the card \"Obtain Approval from Key Stakeholders\"",
+            "name": "user verifies the new position 1 of the card \"Obtain Approval from Key Stakeholders\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"3\"",
+                  "val": "1",
                   "offset": 31
                 },
                 {
                   "val": "\"Obtain Approval from Key Stakeholders\"",
-                  "offset": 47
+                  "offset": 45
                 }
               ],
-              "location": "CreateCardsStepDefs.user_verifies_the_new_position_of_the_card(String,String)"
+              "location": "CreateCardsStepDefs.user_verifies_the_new_position_of_the_card(int,String)"
             },
             "keyword": "Then "
           }
         ],
         "tags": [
           {
+            "name": "@smoke"
+          },
+          {
             "name": "@wip"
+          },
+          {
+            "name": "@ui"
           }
         ]
       }
@@ -503,10 +500,202 @@
     "description": "  As a user of the Trello API and Trello UI\n  I want to be able to create cards through the API and perform some actions with created cards through UI\n  So that I can manage my tasks seamlessly",
     "id": "create-a-board/list/card-through-trello-api-and-perform-some-actions-with-created-cards-through-ui",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/features/03-CreateCardsThroughApiAndVerifyInUi.feature",
+    "uri": "file:src/test/resources/features/CreateCardsThroughApiAndVerifyInUi.feature",
     "tags": [
       {
+        "name": "@smoke",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      },
+      {
         "name": "@wip",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 8
+        }
+      }
+    ]
+  },
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2023-07-21T14:48:11.465Z",
+        "before": [
+          {
+            "result": {
+              "duration": 1292933400,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.setUp()"
+            }
+          }
+        ],
+        "line": 4,
+        "name": "Invalid Login with valid email and invalid password",
+        "description": "",
+        "id": "user-in-valid-login;invalid-login-with-valid-email-and-invalid-password",
+        "after": [
+          {
+            "result": {
+              "duration": 1087749900,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.tearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 7114594100,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "user is on the home page",
+            "match": {
+              "location": "InvalidLoginStepdefs.user_is_on_the_home_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 4656479200,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user clicks login button",
+            "match": {
+              "location": "InvalidLoginStepdefs.user_clicks_login_button()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2005871900,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "user is on the login page",
+            "match": {
+              "location": "InvalidLoginStepdefs.user_is_on_the_login_page()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 60683100,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "user enters his valid email addresse \"unzertrellotask@gmail.com\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"unzertrellotask@gmail.com\"",
+                  "offset": 37
+                }
+              ],
+              "location": "InvalidLoginStepdefs.user_enters_his_valid_email_addresse(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2069816800,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "clicks the fortfahren button",
+            "match": {
+              "location": "InvalidLoginStepdefs.clicks_the_fortfahren_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2086513600,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "user enters an invalid password \"invalidpassword123\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"invalidpassword123\"",
+                  "offset": 32
+                }
+              ],
+              "location": "InvalidLoginStepdefs.user_enters_an_invalid_password(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 63646900,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "user clicks the login button",
+            "match": {
+              "location": "InvalidLoginStepdefs.user_clicks_the_login_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 28985200,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "user should see an error message \"Einloggen, um fortzufahren\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Einloggen, um fortzufahren\"",
+                  "offset": 33
+                }
+              ],
+              "location": "InvalidLoginStepdefs.user_should_see_an_error_message(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 3904900,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "user remains on the login page",
+            "match": {
+              "location": "InvalidLoginStepdefs.user_remains_on_the_login_page()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@ui"
+          }
+        ]
+      }
+    ],
+    "name": "User in valid Login",
+    "description": "",
+    "id": "user-in-valid-login",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/InvalidLogin.feature",
+    "tags": [
+      {
+        "name": "@ui",
         "type": "Tag",
         "location": {
           "line": 1,

@@ -13,8 +13,8 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         glue = "com/trello/step_definitions",
         dryRun = false,
-        //tags = {"@api,@ui"}
-        tags = "@wip"
+        tags = {"@api,@ui"}
+        //tags = "@wip"
 )
 
 public class CukesRunner {

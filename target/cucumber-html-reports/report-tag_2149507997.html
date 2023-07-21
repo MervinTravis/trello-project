@@ -76,7 +76,7 @@ $(document).ready(function() {
     <tr class="info">
       <td>Trello HTML Reports</td>
         <td>1</td>
-      <td>20 Jul 2023, 15:27</td>
+      <td>21 Jul 2023, 16:49</td>
     </tr>
   </tbody>
 </table>
@@ -129,18 +129,18 @@ $(document).ready(function() {
         <tbody>
         <tr>
           <td class="tagname">@wip</td>
-          <td      class="passed"    >19</td>
+          <td      class="passed"    >24</td>
           <td >0</td>
           <td >0</td>
           <td >0</td>
           <td >0</td>
-          <td class="total">19</td>
+          <td class="total">24</td>
 
           <td  class="passed"    >2</td>
           <td >0</td>
           <td class="total">2</td>
 
-          <td class="duration" data-value="34375838700">34.375</td>
+          <td class="duration" data-value="29483319300">29.483</td>
           <td class="passed">Passed</td>
         </tr>
         </tbody>
@@ -173,24 +173,27 @@ $(document).ready(function() {
 <div class="element">
     <div class="indention">
       <b>Feature:</b>
-      <a href="report-feature_418346890.html">Creating Cards in Trello API and Verifying in Trello UI</a>
+      <a href="report-feature_1931706472.html">Create a Board/List/Card through Trello API and perform some actions with created cards through UI</a>
     </div>
 
 
 <div class="tags indention">
     <b>Tags:</b>
+       <a href="report-tag_4089311534.html">@smoke</a>
        <a href="report-tag_2149507997.html">@wip</a>
+       <a href="report-tag_2149487065.html">@api</a>
+       <a href="report-tag_1922747921.html">@ignore</a>
 </div>
 
 
-  <span class="lead-duration duration">5.438</span>
+  <span class="lead-duration duration">5.853</span>
 
 
   <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-1">
 
 <div class="brief passed">
   <span class="keyword indention">Scenario</span>
-  <span class="name">Create a Card through Trello API and Verify in Trello UI</span>
+  <span class="name">Create a Board/List/Card through Trello API</span>
 
 
      <i class="chevron fa fa-fw"></i>
@@ -221,23 +224,7 @@ $(document).ready(function() {
             <span class="keyword indention">Before</span>
               <span class="location name">Hooks.setUpApi()</span>
 
-  <span class="lead-duration duration">0.437</span>
-
-          </div>
-
-
-
-
-
-
-
-        </div>
-        <div class="hook">
-          <div class="brief passed">
-            <span class="keyword indention">Before</span>
-              <span class="location name">Hooks.setUp()</span>
-
-  <span class="lead-duration duration">2.261</span>
+  <span class="lead-duration duration">0.397</span>
 
           </div>
 
@@ -274,7 +261,7 @@ $(document).ready(function() {
   <span class="keyword indention">Given</span>
   <span class="name">user has  a valid Trello API key and token</span>
 
-  <span class="lead-duration duration">0.057</span>
+  <span class="lead-duration duration">1.917</span>
 
 </div>
 
@@ -299,9 +286,63 @@ $(document).ready(function() {
 
 <div class="brief step-name-And passed">
   <span class="keyword indention">And</span>
-  <span class="name">the user has a Trello board with the name <span class="argument">&quot;NEW BOARD&quot;</span></span>
+  <span class="name">user creates a new Trello board with the name <span class="argument">&quot;IT Project Management&quot;</span></span>
 
-  <span class="lead-duration duration">2.500</span>
+  <span class="lead-duration duration">2.104</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">the board should be created successfully with name <span class="argument">&quot;IT Project Management&quot;</span></span>
+
+  <span class="lead-duration duration">0.002</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">response status code should be <span class="argument">200</span></span>
+
+  <span class="lead-duration duration">0.000</span>
 
 </div>
 
@@ -328,7 +369,7 @@ $(document).ready(function() {
   <span class="keyword indention">Given</span>
   <span class="name">user has the board id from the response body</span>
 
-  <span class="lead-duration duration">0.003</span>
+  <span class="lead-duration duration">0.000</span>
 
 </div>
 
@@ -353,9 +394,63 @@ $(document).ready(function() {
 
 <div class="brief step-name-And passed">
   <span class="keyword indention">And</span>
-  <span class="name">the user send a POST request with the list name <span class="argument">&quot;NEW LIST&quot;</span></span>
+  <span class="name">user creates a new list with name <span class="argument">&quot;Unassigned&quot;</span></span>
 
-  <span class="lead-duration duration">0.511</span>
+  <span class="lead-duration duration">0.332</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">the list should be created successfully with name <span class="argument">&quot;Unassigned&quot;</span></span>
+
+  <span class="lead-duration duration">0.013</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">response status code should be <span class="argument">200</span></span>
+
+  <span class="lead-duration duration">0.000</span>
 
 </div>
 
@@ -382,7 +477,7 @@ $(document).ready(function() {
   <span class="keyword indention">Given</span>
   <span class="name">user has the list id from the response body</span>
 
-  <span class="lead-duration duration">0.001</span>
+  <span class="lead-duration duration">0.000</span>
 
 </div>
 
@@ -409,7 +504,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">user send a POST request to create cards with following names:</span>
 
-  <span class="lead-duration duration">2.361</span>
+  <span class="lead-duration duration">1.481</span>
 
 </div>
 
@@ -421,13 +516,39 @@ $(document).ready(function() {
 
           <table class="step-arguments">
               <tr>
-                  <td>NEW CARD</td>
-                  <td>OLD CARD</td>
-                  <td>ANCIENT CARD</td>
-                  <td>A</td>
-                  <td>B</td>
+                  <td>Define Project Scope and Objectives</td>
+                  <td>Conduct Meetings with Stakeholders</td>
+                  <td>Obtain Approval from Key Stakeholders</td>
+                  <td>Monitor System Rollout Progress</td>
               </tr>
           </table>
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">response status code should be <span class="argument">200</span></span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
 
 
 
@@ -445,7 +566,7 @@ $(document).ready(function() {
   <span class="keyword indention">And</span>
   <span class="name">the response body should contain the created cards with following names:</span>
 
-  <span class="lead-duration duration">0.003</span>
+  <span class="lead-duration duration">0.000</span>
 
 </div>
 
@@ -457,11 +578,10 @@ $(document).ready(function() {
 
           <table class="step-arguments">
               <tr>
-                  <td>NEW CARD</td>
-                  <td>OLD CARD</td>
-                  <td>ANCIENT CARD</td>
-                  <td>A</td>
-                  <td>B</td>
+                  <td>Define Project Scope and Objectives</td>
+                  <td>Conduct Meetings with Stakeholders</td>
+                  <td>Obtain Approval from Key Stakeholders</td>
+                  <td>Monitor System Rollout Progress</td>
               </tr>
           </table>
 
@@ -520,24 +640,26 @@ $(document).ready(function() {
 <div class="element">
     <div class="indention">
       <b>Feature:</b>
-      <a href="report-feature_418346890.html">Creating Cards in Trello API and Verifying in Trello UI</a>
+      <a href="report-feature_1931706472.html">Create a Board/List/Card through Trello API and perform some actions with created cards through UI</a>
     </div>
 
 
 <div class="tags indention">
     <b>Tags:</b>
+       <a href="report-tag_4089311534.html">@smoke</a>
        <a href="report-tag_2149507997.html">@wip</a>
+       <a href="report-tag_2147548883.html">@ui</a>
 </div>
 
 
-  <span class="lead-duration duration">28.937</span>
+  <span class="lead-duration duration">23.629</span>
 
 
   <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-5">
 
 <div class="brief passed">
   <span class="keyword indention">Scenario</span>
-  <span class="name">Verifying Card Creation in Trello UI</span>
+  <span class="name">Performing some actions with created cards through Trello UI</span>
 
 
      <i class="chevron fa fa-fw"></i>
@@ -566,25 +688,9 @@ $(document).ready(function() {
         <div class="hook">
           <div class="brief passed">
             <span class="keyword indention">Before</span>
-              <span class="location name">Hooks.setUpApi()</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-          </div>
-
-
-
-
-
-
-
-        </div>
-        <div class="hook">
-          <div class="brief passed">
-            <span class="keyword indention">Before</span>
               <span class="location name">Hooks.setUp()</span>
 
-  <span class="lead-duration duration">0.017</span>
+  <span class="lead-duration duration">0.134</span>
 
           </div>
 
@@ -621,7 +727,7 @@ $(document).ready(function() {
   <span class="keyword indention">Given</span>
   <span class="name">user is logged into Trello.com with valid credentials</span>
 
-  <span class="lead-duration duration">24.040</span>
+  <span class="lead-duration duration">19.395</span>
 
 </div>
 
@@ -646,9 +752,9 @@ $(document).ready(function() {
 
 <div class="brief step-name-When passed">
   <span class="keyword indention">When</span>
-  <span class="name">user clicks the board <span class="argument">&quot;NEW BOARD&quot;</span></span>
+  <span class="name">user clicks the board <span class="argument">&quot;IT Project Management&quot;</span></span>
 
-  <span class="lead-duration duration">0.276</span>
+  <span class="lead-duration duration">0.216</span>
 
 </div>
 
@@ -673,9 +779,9 @@ $(document).ready(function() {
 
 <div class="brief step-name-Then passed">
   <span class="keyword indention">Then</span>
-  <span class="name">user should see the newly created lists in Trello board page with name <span class="argument">&quot;NEW LIST&quot;</span></span>
+  <span class="name">user should see the newly created list in Trello board page with name <span class="argument">&quot;Unassigned&quot;</span></span>
 
-  <span class="lead-duration duration">1.127</span>
+  <span class="lead-duration duration">0.860</span>
 
 </div>
 
@@ -700,9 +806,9 @@ $(document).ready(function() {
 
 <div class="brief step-name-And passed">
   <span class="keyword indention">And</span>
-  <span class="name">user opens the card with the name <span class="argument">&quot;NEW CARD&quot;</span></span>
+  <span class="name">user opens the card with the name <span class="argument">&quot;Obtain Approval from Key Stakeholders&quot;</span></span>
 
-  <span class="lead-duration duration">1.043</span>
+  <span class="lead-duration duration">0.229</span>
 
 </div>
 
@@ -729,7 +835,7 @@ $(document).ready(function() {
   <span class="keyword indention">And</span>
   <span class="name">user clicks on the add member button</span>
 
-  <span class="lead-duration duration">0.673</span>
+  <span class="lead-duration duration">1.139</span>
 
 </div>
 
@@ -756,7 +862,7 @@ $(document).ready(function() {
   <span class="keyword indention">And</span>
   <span class="name">user searches the text <span class="argument">&quot;unzertrellotask&quot;</span> in the search input field</span>
 
-  <span class="lead-duration duration">0.214</span>
+  <span class="lead-duration duration">0.134</span>
 
 </div>
 
@@ -783,7 +889,7 @@ $(document).ready(function() {
   <span class="keyword indention">And</span>
   <span class="name">user adds new member with the name <span class="argument">&quot;unzertrellotask&quot;</span> to the card</span>
 
-  <span class="lead-duration duration">0.244</span>
+  <span class="lead-duration duration">0.116</span>
 
 </div>
 
@@ -810,7 +916,7 @@ $(document).ready(function() {
   <span class="keyword indention">And</span>
   <span class="name">user closes the member dialog</span>
 
-  <span class="lead-duration duration">0.099</span>
+  <span class="lead-duration duration">0.048</span>
 
 </div>
 
@@ -837,7 +943,7 @@ $(document).ready(function() {
   <span class="keyword indention">And</span>
   <span class="name">user verifies the newly added member <span class="argument">&quot;unzertrellotask&quot;</span></span>
 
-  <span class="lead-duration duration">0.184</span>
+  <span class="lead-duration duration">0.138</span>
 
 </div>
 
@@ -864,7 +970,7 @@ $(document).ready(function() {
   <span class="keyword indention">Then</span>
   <span class="name">user deletes the newly added member from the card</span>
 
-  <span class="lead-duration duration">0.120</span>
+  <span class="lead-duration duration">0.062</span>
 
 </div>
 
@@ -889,9 +995,9 @@ $(document).ready(function() {
 
 <div class="brief step-name-And passed">
   <span class="keyword indention">And</span>
-  <span class="name">user moves the card on the position <span class="argument">5</span></span>
+  <span class="name">user moves the card on the position <span class="argument">1</span></span>
 
-  <span class="lead-duration duration">0.912</span>
+  <span class="lead-duration duration">0.491</span>
 
 </div>
 
@@ -916,9 +1022,9 @@ $(document).ready(function() {
 
 <div class="brief step-name-Then passed">
   <span class="keyword indention">Then</span>
-  <span class="name">user verifies the new position of the card</span>
+  <span class="name">user verifies the new position <span class="argument">1</span> of the card <span class="argument">&quot;Obtain Approval from Key Stakeholders&quot;</span></span>
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">0.796</span>
 
 </div>
 
@@ -961,9 +1067,9 @@ $(document).ready(function() {
         <div class="hook">
           <div class="brief passed">
             <span class="keyword indention">After</span>
-              <span class="location name">Hooks.destroy()</span>
+              <span class="location name">Hooks.tearDown()</span>
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">0.758</span>
 
           </div>
 

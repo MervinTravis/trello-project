@@ -21,4 +21,7 @@ public class LoginPage {
 
     @FindBy(xpath = "//span[text()='Einloggen']")
     public WebElement einloggenButton;
+
+    @FindBy(xpath ="//div[@data-testid='header-suffix']")
+    public WebElement errorMessage;
 }

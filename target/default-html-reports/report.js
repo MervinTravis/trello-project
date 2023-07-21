@@ -1,9 +1,12 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/03-CreateCardsThroughApiAndVerifyInUi.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/CreateCardsThroughApiAndVerifyInUi.feature");
 formatter.feature({
   "name": "Create a Board/List/Card through Trello API and perform some actions with created cards through UI",
   "description": "  As a user of the Trello API and Trello UI\n  I want to be able to create cards through the API and perform some actions with created cards through UI\n  So that I can manage my tasks seamlessly",
   "keyword": "Feature",
   "tags": [
+    {
+      "name": "@smoke"
+    },
     {
       "name": "@wip"
     }
@@ -15,12 +18,18 @@ formatter.scenario({
   "keyword": "Scenario",
   "tags": [
     {
+      "name": "@smoke"
+    },
+    {
       "name": "@wip"
+    },
+    {
+      "name": "@api"
+    },
+    {
+      "name": "@ignore"
     }
   ]
-});
-formatter.before({
-  "status": "passed"
 });
 formatter.before({
   "status": "passed"
@@ -174,12 +183,15 @@ formatter.scenario({
   "keyword": "Scenario",
   "tags": [
     {
+      "name": "@smoke"
+    },
+    {
       "name": "@wip"
+    },
+    {
+      "name": "@ui"
     }
   ]
-});
-formatter.before({
-  "status": "passed"
 });
 formatter.before({
   "status": "passed"
@@ -285,7 +297,7 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user moves the card on the position 3",
+  "name": "user moves the card on the position 1",
   "keyword": "And "
 });
 formatter.match({
@@ -295,11 +307,128 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "user verifies the new position \"3\" of the card \"Obtain Approval from Key Stakeholders\"",
+  "name": "user verifies the new position 1 of the card \"Obtain Approval from Key Stakeholders\"",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "CreateCardsStepDefs.user_verifies_the_new_position_of_the_card(String,String)"
+  "location": "CreateCardsStepDefs.user_verifies_the_new_position_of_the_card(int,String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.after({
+  "status": "passed"
+});
+formatter.uri("file:src/test/resources/features/InvalidLogin.feature");
+formatter.feature({
+  "name": "User in valid Login",
+  "description": "",
+  "keyword": "Feature",
+  "tags": [
+    {
+      "name": "@ui"
+    }
+  ]
+});
+formatter.scenario({
+  "name": "Invalid Login with valid email and invalid password",
+  "description": "",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "name": "@ui"
+    }
+  ]
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user is on the home page",
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "InvalidLoginStepdefs.user_is_on_the_home_page()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user clicks login button",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "InvalidLoginStepdefs.user_clicks_login_button()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user is on the login page",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "InvalidLoginStepdefs.user_is_on_the_login_page()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user enters his valid email addresse \"unzertrellotask@gmail.com\"",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "InvalidLoginStepdefs.user_enters_his_valid_email_addresse(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "clicks the fortfahren button",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "InvalidLoginStepdefs.clicks_the_fortfahren_button()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user enters an invalid password \"invalidpassword123\"",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "InvalidLoginStepdefs.user_enters_an_invalid_password(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user clicks the login button",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "InvalidLoginStepdefs.user_clicks_the_login_button()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user should see an error message \"Einloggen, um fortzufahren\"",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "InvalidLoginStepdefs.user_should_see_an_error_message(String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user remains on the login page",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "InvalidLoginStepdefs.user_remains_on_the_login_page()"
 });
 formatter.result({
   "status": "passed"

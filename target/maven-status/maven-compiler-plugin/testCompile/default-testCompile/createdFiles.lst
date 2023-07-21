@@ -1,0 +1,9 @@
+com\trello\step_definitions\CreateCardsStepDefs.class
+com\trello\step_definitions\Hooks.class
+com\trello\runners\CukesRunner.class
+com\trello\pages\LoginPage.class
+com\trello\pages\DashBoardPage.class
+com\trello\pages\BoardPage.class
+com\trello\utilities\Driver.class
+com\trello\pages\HomePage.class
+com\trello\utilities\ConfigurationReader.class

@@ -17,8 +17,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -45,7 +43,7 @@ public class CreateCardsStepDefs {
 
     private static String cardId;
 
-    private static String cardName;
+    //private static String cardName;
 
    final List<String> actualCardNames = new ArrayList<>();
 
@@ -66,16 +64,11 @@ public class CreateCardsStepDefs {
         // and extract the board ID and name from the response
         idBoard = response.path("id");
         boardName = response.path("name");
-        System.out.println("idboard from response = " + idBoard);
-        System.out.println("boardName from response = " + boardName);
         mapOfBoards.put(boardName, idBoard);
-        System.out.println("mapOfBoards boardname = " + mapOfBoards.get(boardName));
-        System.out.println("mapOfBoards idboard = " + mapOfBoards.get(idBoard));
     }
 
     @And("the board should be created successfully with name {string}")
     public void the_board_should_be_created_successfully_with_name(String expectedBoardName) {
-
         for (Map.Entry<String, String> entry : mapOfBoards.entrySet()) {
             String actualBoardName = entry.getKey();
             Assert.assertEquals(expectedBoardName, actualBoardName);
@@ -96,11 +89,8 @@ public class CreateCardsStepDefs {
                 .queryParam("key", API_KEY)
                 .queryParam("token", API_TOKEN)
                 .post("/lists");
-        // and extract the list ID from the response
+        // extract the list ID from the response
         listId = response.path("id");
-        System.out.println("listId from response = " + listId);
-        System.out.println("actualStatusCode from response = " + response.statusCode());
-
     }
 
     @Then("the list should be created successfully with name {string}")
@@ -129,7 +119,6 @@ public class CreateCardsStepDefs {
                     .post("/cards");
 
             cardId = response.path("id");
-            System.out.println("cardId from response= " + cardId);
             actualCardNames.add(response.path("name"));
 
         }
@@ -148,8 +137,6 @@ public class CreateCardsStepDefs {
         for (int i=0; i<tableCards.size(); i++){
             String actualCardName = actualCardNames.get(i);
             String expectedCardName = tableCards.get(i);
-            System.out.println("expected card name from data table= " + expectedCardName);
-            System.out.println("actualCardName from response = " + actualCardName);
             Assert.assertEquals(expectedCardName, actualCardName);
         }
 
@@ -157,7 +144,6 @@ public class CreateCardsStepDefs {
 
     @Given("user is logged into Trello.com with valid credentials")
     public void user_is_logged_into_Trello_com_with_valid_credentials() throws InterruptedException {
-
         //open home page
         String url = ConfigurationReader.get("url");
         Driver.get().get(url);
@@ -222,10 +208,8 @@ public class CreateCardsStepDefs {
         List<WebElement> allCards = boardPage.allCardsCss;
         wait.until(ExpectedConditions.visibilityOfAllElements(allCards));
         for (WebElement cardName : allCards) {
-            System.out.println("cardName from board page= " + cardName.getText());
             wait.until(ExpectedConditions.visibilityOf(cardName));
             if (cardName.getText().equals(expectedCardName)) {
-                System.out.println("cardName from if block  = " + cardName.getText());
                 cardName.click();
             }
         }
@@ -257,9 +241,8 @@ public class CreateCardsStepDefs {
 
     @Then("user verifies the newly added member {string}")
     public void user_verifies_the_newly_added_member(String newMember) {
-        boardPage.memberOnCardMenu.click();
+        boardPage.memberOnCards.click();
         Assert.assertEquals(boardPage.memberTitle.getText(),newMember);
-
     }
 
     @Then("user deletes the newly added member from the card")
@@ -277,23 +260,22 @@ public class CreateCardsStepDefs {
         boardPage.cardDialogCloseBtn.click();
     }
 
-    @Then("user verifies the new position {string} of the card {string}")
-    public void user_verifies_the_new_position_of_the_card(String expectedPosition, String card) {
+    @Then("user verifies the new position {int} of the card {string}")
+    public void user_verifies_the_new_position_of_the_card(int position, String name) {
         List<WebElement> allCards = boardPage.allCardsCss;
             wait.until(ExpectedConditions.visibilityOfAllElements(allCards));
+
             for (WebElement cardName : allCards) {
                  wait.until(ExpectedConditions.visibilityOf(cardName));
-                 if (cardName.getText().equals(card)) {
+                 if (cardName.getText().equals(name)) {
                     cardName.click();
                  }
             }
              boardPage.moveCardButton.click();
              Select select = new Select(boardPage.cardPosition);
              String actualPosition = select.getFirstSelectedOption().getText();
-             System.out.println("actualPosition of the card= " + actualPosition);
+             String expectedPosition = String.valueOf(position);
              Assert.assertTrue(actualPosition.contains(expectedPosition));
              boardPage.cardDialogCloseBtn.click();
-
     }
-
 }

@@ -12,27 +12,27 @@ import static io.restassured.RestAssured.*;
 
 public class Hooks {
 
-    @Before ("@wip and not @ignore")
+    @Before ("@ui and not @ignore")
     public void setUp() {
         Driver.get().manage().window().maximize();
         Driver.get().manage().deleteAllCookies();
         Driver.get().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
     }
-    /*
+
     @After("@ui and not @ignore")
     public void tearDown() {
         Driver.closeDriver();
     }
 
-     */
 
-    @Before("@wip")
+
+    @Before("@api")
     public void setUpApi(){
         baseURI = ConfigurationReader.get("baseUri");
     }
 
-    @After("@wip")
+    @After("@api")
     public static void destroy(){
         reset();
     }
